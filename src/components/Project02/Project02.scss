@@ -1,0 +1,48 @@
+.project02 {
+  background: url(../../../public/images/project_bg.jpg) no-repeat center center/cover;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    color: #333;
+    padding-top: 80px;
+    margin-bottom: 50px;
+    opacity: 0.8;
+  }
+
+  .container {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin: 0 auto;
+
+    div {
+      position: relative;
+      animation: smooth 1s;
+
+      @keyframes smooth {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+
+    }
+  }
+}

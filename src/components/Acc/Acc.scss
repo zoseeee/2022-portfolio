@@ -1,0 +1,55 @@
+.accordion-wrapper {
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .accordion {
+        width: 100%;
+        max-width: 600px;
+
+        .accordionHeading {
+            border-top: 1px dashed #ddd;
+            padding: 14px 0;
+            cursor: pointer;
+
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    letter-spacing: 1.2px;
+                    font-weight: 600;
+                    font-size: 50px;
+                    font-family: 'KoPub Batang', sans-serif;
+                }
+
+                span {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .accordionContent {
+            height: 0;
+            opacity: 0;
+            display: flex;
+            overflow: hidden;
+            transition: all 5s ease-in-out;
+
+            p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+        }
+
+        .accordionContent.show {
+            height: 180px;
+            opacity: 1;
+            transition: all 5s ease-in-out;
+        }
+    }
+
+}

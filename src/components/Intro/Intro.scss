@@ -1,0 +1,100 @@
+.home {
+    background: url(../../../public/images/LP_bg.jpg) no-repeat center center/cover;
+    white-space: pre-wrap;
+
+    .wrapper {
+        position: absolute;
+        top: 45%;
+        right: 93px;
+        transform: translateY(-40%);
+        font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", sans-serif;
+
+        .hide {
+            overflow: hidden;
+
+            p {
+                animation: up 1.2s;
+
+                span {
+                    font-size: 60px;
+                }
+
+                @keyframes up {
+                    0% {
+                        margin-bottom: -100px;
+                    }
+
+                    100% {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .title {
+            font-size: 80px;
+            font-weight: 900;
+            margin-bottom: 150px;
+            color: #DDD089;
+            text-align: right;
+
+            .sub {
+                // font-family: 'KoPub Batang', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 40px;
+                color: #f5f5f5;
+                opacity: 0.5;
+            }
+        }
+
+        .lng {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 105px;
+            color: #f5f5f5;
+        }
+
+    }
+        button {
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: 700;
+        color: #f5f5f5;
+        animation: smoothAppear 1s;
+
+        &::after {
+            content: url(../../../public/images/arrows.png);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            animation: bounce 0.7s ease-in infinite;
+            animation-direction: alternate;
+
+            @keyframes bounce {
+                0% {
+                    margin-top: -10px;
+                    opacity: 0;
+                }
+
+                100% {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    @keyframes smoothAppear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
